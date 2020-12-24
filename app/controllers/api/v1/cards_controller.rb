@@ -30,7 +30,7 @@ class Api::V1::CardsController < ApplicationController
 	private
     
 	def card_params 
-		params.permit(:question, :answer)
+		params.permit(:question, :answer, :deck_id)
 	end
 
 end
