@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2020_12_23_010820) do
     t.string "title"
     t.string "subject"
     t.boolean "completed"
-    t.integer "count"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -5,10 +5,10 @@ User.destroy_all
 user1 = User.create(email: 'rtetelbaum@mailbox.org', password: 'pass123', first_name: 'Roman', last_name: 'Tetelbaum')
 user2 = User.create(email: 'warrenniu@gmail.com', password: 'pass123', first_name: 'Warren', last_name: 'Niu')
 
-deck1 = Deck.create(title: "Roman's Rails Review", subject: 'Coding Interview', completed: false, count: 10, user: user1)
-deck2 = Deck.create(title: "Roman's Math Review", subject: 'Coding Interview', completed: false, count: 10, user: user1)
-deck3 = Deck.create(title: "Warren's Rails Review", subject: 'Coding Interview', completed: false, count: 10, user: user2)
-deck4 = Deck.create(title: "Warren's Math Review", subject: 'Coding Interview', completed: false, count: 10, user: user2)
+deck1 = Deck.create(title: "Roman's Rails Review", subject: 'Coding Interview', completed: false, user: user1)
+deck2 = Deck.create(title: "Roman's Math Review", subject: 'Coding Interview', completed: false, user: user1)
+deck3 = Deck.create(title: "Warren's Rails Review", subject: 'Coding Interview', completed: false, user: user2)
+deck4 = Deck.create(title: "Warren's Math Review", subject: 'Coding Interview', completed: false, user: user2)
 
 card1 = Card.create(question: 'What is the table that joins two models in a has-many to has-many relationship?', answer: 'Join table', deck: deck1)
 card2 = Card.create(question: 'Explain how we can define Ruby regular expressions?', answer: 'A Ruby regular expression is a special sequence of characters that helps you match or find other strings.', deck: deck1)

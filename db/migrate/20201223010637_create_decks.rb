@@ -4,7 +4,6 @@ class CreateDecks < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :subject
       t.boolean :completed
-      t.integer :count
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
