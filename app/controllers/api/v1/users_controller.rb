@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-	skip_before_action :authorized, only: [:create]
+	skip_before_action :authorized, only: [:index, :create]
 
 	def index
 		users = User.all.includes(:decks)
@@ -24,6 +24,6 @@ class Api::V1::UsersController < ApplicationController
 	private
     
 	def user_params 
-		params.require(:user).permit(:email, :password, :first_name, :last_name)
+		params.require(:user).permit(:email, :password_digest, :first_name, :last_name)
 	end
 end
