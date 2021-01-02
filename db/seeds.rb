@@ -2,8 +2,8 @@ Card.destroy_all
 Deck.destroy_all
 User.destroy_all
 
-user1 = User.create(email: 'rtetelbaum@mailbox.org', password: 'pass123', first_name: 'Roman', last_name: 'Tetelbaum')
-user2 = User.create(email: 'warrenniu@gmail.com', password: 'pass123', first_name: 'Warren', last_name: 'Niu')
+user1 = User.create(email: 'rtetelbaum@mailbox.org', password_digest: 'pass123', first_name: 'Roman', last_name: 'Tetelbaum')
+user2 = User.create(email: 'warrenniu@gmail.com', password_digest: 'pass123', first_name: 'Warren', last_name: 'Niu')
 
 deck1 = Deck.create(title: "Roman's Rails Review", subject: 'Coding Interview', completed: false, user: user1)
 deck2 = Deck.create(title: "Roman's Math Review", subject: 'Coding Interview', completed: false, user: user1)
